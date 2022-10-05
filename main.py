@@ -36,9 +36,12 @@ with open('books.csv', 'r') as books_csv:
     artist_search = '1'
     # 20 рандомных книг
     random_books = '2'
+    # Закрыть программу
+    quit_word = 'quit'
     while True:
         what_to_do = input('Чтобы открыть поиск по авторам, введите "1"\n'
                            'Чтобы сгенерировать список 20 рандомных книг, введите "2"\n'
+                           'Чтобы закрыть программу введите "quit"\n'
                            '>>>')
         if what_to_do == artist_search:
             artist_name = input('Произведения какого автора вы хотите найти?\n'
@@ -88,3 +91,8 @@ with open('books.csv', 'r') as books_csv:
                     text_to_write += f'{index + 1}. {books_to_read[index][3]}. {books_to_read[index][1]} - {books_to_read[index][6].split("-")[0]} г.\n'
                 books_to_read_txt.write(text_to_write)
             print("Список был сгенерирован и успешно сохранен в файле 20BooksToRead.txt")
+        elif what_to_do == quit_word:
+            print('Надеюсь, вам понравилось\n')
+            break
+        else:
+            print('Такого варианта не предусмотрено')
