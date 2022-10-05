@@ -92,7 +92,7 @@ with open('books.csv', 'r') as books_csv:
                 books_to_read_txt.write(text_to_write)
             print("Список был сгенерирован и успешно сохранен в файле 20BooksToRead.txt")
         elif what_to_do == quit_word:
-            print('Надеюсь, вам понравилось\n')
+            print('Надеюсь, вам понравилось')
             break
         else:
             print('Такого варианта не предусмотрено')
