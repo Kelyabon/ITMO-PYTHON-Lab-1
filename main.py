@@ -14,7 +14,6 @@ with open('books.csv', 'r') as books_csv:
     tags_list = list()
     # Все книги дешевле 200р
     cheap_books = list()
-    e = []
     for book in books:
         book_name = book[1]
         price = book[7].replace(',', '.')
