@@ -68,7 +68,7 @@ with open('books.csv', 'r') as books_csv:
                                      '\n   '.join(artist_books[:20]) + \
                                      f'\n\nВы сейчас на 1 странице из {max_page}\n' \
                                      'Чтобы перейти на другую страницу, введите ее номер\n' \
-                                     'Чтобы вернуться в главное меню введите что угодно, кроме цифр'
+                                     'Чтобы вернуться в главное меню введите, что угодно, кроме цифр'
                     page = input(text_to_print + '\n>>>')
                 while page.isdigit():
                     page = int(page)
@@ -80,7 +80,7 @@ with open('books.csv', 'r') as books_csv:
                                      '\n   '.join(artist_books[20 * (page - 1):20 * page]) + \
                                      f'\n\nВы сейчас на {page} странице из {max_page}\n' \
                                      'Чтобы перейти на другую страницу, введите ее номер\n' \
-                                     'Чтобы вернуться в главное меню введите что угодно, кроме цифр\n'
+                                     'Чтобы вернуться в главное меню введите, что угодно, кроме цифр\n'
                                      '>>>')
         elif what_to_do == random_books:
             with open('20BooksToRead.txt', 'w') as books_to_read_txt:
